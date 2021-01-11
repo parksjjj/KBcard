@@ -12,7 +12,7 @@ def registration():
         'kakao AD_MO' : '모먼트_',
         'kakao AD_MO_비즈보드' : '비즈보드_',
         'SKT_T전화/빌레터' : '모비엠_',
-        '네이버M 메일DA' : '네이버메일_',
+        '네이버M 메일DA' : '네이버메일_'
     }
 
     reg_data['매체'] = reg_data['매체'].apply(lambda x : name_dict.get(x) if x in name_dict.keys() else x)
@@ -45,14 +45,14 @@ def registration():
 
 def issue():
     issue_data = iss_sheet()
-    issue_data = issue_data.melt(id_vars= ['매체','카테고리', '상품구분'])
+    issue_data = issue_data.melt(id_vars= ['매체','카테고리', '상품'])
     issue_data = issue_data.rename(columns = {'variable' : '날짜', 'value' : '발급완료'})
 
     name_dict = {
         'kakao AD_MO' : '모먼트_',
         'kakao AD_MO_비즈보드' : '비즈보드_',
         'SKT_T전화/빌레터' : '모비엠_',
-        '네이버M 메일DA' : '네이버메일_',
+        '네이버M 메일DA' : '네이버메일_'
     }
 
     issue_data['매체'] = issue_data['매체'].apply(lambda x : name_dict.get(x) if x in name_dict.keys() else x)

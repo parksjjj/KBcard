@@ -60,6 +60,7 @@ def ga_preprocess():
         'mTargetingGates': '타겟팅게이츠',
         'criteo': '크리테오',
         'navermmail': '네이버메일'
+
     }
 
     raw_data = ga_raw()
