@@ -4,7 +4,7 @@ download_dir = 'C:/Users/asdad/Downloads'
 # ========================
 
 report_dir = dropbox_dir + '/광고 영업/2. 광고주/KB국민카드/리포트 자동화'
-env_dir = dropbox_dir + '/광고 영업/2. 광고주/KB국민카드/report_env/KBcard'
+env_dir = dropbox_dir + '/광고 영업/2. 광고주/KB국민카드/report_env'
 
 media_raw_dir = report_dir + '/1. 매체 데이터'
 da_raw_dir = media_raw_dir + '/1. DA'

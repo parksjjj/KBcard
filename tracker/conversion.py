@@ -45,7 +45,7 @@ def registration():
 
 def issue():
     issue_data = iss_sheet()
-    issue_data = issue_data.melt(id_vars= '매체')
+    issue_data = issue_data.melt(id_vars= ['매체','카테고리', '상품구분'])
     issue_data = issue_data.rename(columns = {'variable' : '날짜', 'value' : '발급완료'})
 
     name_dict = {
