@@ -9,7 +9,7 @@ def registration():
     reg_data = reg_data.loc[reg_data['매체']!='Kbpay_내부사용']
 
     name_dict = {
-        'kakao AD_MO' : '모먼트_',
+        'kakao AD_MO_모먼트' : '모먼트_',
         'kakao AD_MO_비즈보드' : '비즈보드_',
         'SKT_T전화/빌레터' : '모비엠_',
         '네이버M 메일DA' : '네이버메일_'
@@ -19,7 +19,7 @@ def registration():
     reg_data['매체'] = reg_data['매체'].apply(lambda x : x.split('_')[0])
     reg_data['매체'] = reg_data['매체'].apply(lambda x : '올크레딧' if x=='올크래딧' else x)
 
-    reg_columns = ['날짜', '상품코드', '권유자번호', '매체']
+    reg_columns = ['날짜', '상품코드', '권유자번호', '매체', '상품', '카테고리']
 
     reg_reg= reg_data[reg_columns]
     reg_reg['cnt'] = 1
@@ -49,8 +49,9 @@ def issue():
     issue_data = issue_data.rename(columns = {'variable' : '날짜', 'value' : '발급완료'})
 
     name_dict = {
-        'kakao AD_MO' : '모먼트_',
+        'Kakao AD_MO' : '모먼트_',
         'kakao AD_MO_비즈보드' : '비즈보드_',
+        'Kakao AD_PC': '모먼트_',
         'SKT_T전화/빌레터' : '모비엠_',
         '네이버M 메일DA' : '네이버메일_'
     }

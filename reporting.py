@@ -1,6 +1,6 @@
 from media.sub_media import *
-from tracker import *
 from setting.directory import *
+from tracker import *
 
 media_data = media_preprocess()
 ga_data = ga.ga_preprocess()
