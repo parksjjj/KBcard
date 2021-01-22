@@ -15,7 +15,7 @@ def fill_values(df, columns, fill_type):
 
 def media_cost(df):
     df.index = range(0, len(df))
-    vat_media = ['Naver_GFA', '모먼트', '비즈보드']
+    vat_media = ['Naver_GFA', '모먼트', '비즈보드', '에이스트레이더']
     df.loc[df['매체'].isin(vat_media), '비용'] = df['비용']
 
     markup_10_media = ['페이스북', '인스타그램', '트위터']

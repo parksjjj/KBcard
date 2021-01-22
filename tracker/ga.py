@@ -59,7 +59,11 @@ def ga_preprocess():
         'TargetingGates': '타겟팅게이츠',
         'mTargetingGates': '타겟팅게이츠',
         'criteo': '크리테오',
-        'navermmail': '네이버메일'
+        'navermmail': '네이버메일',
+        'mobiem' : '모비엠',
+        'okcashback' : 'OCB',
+        'okcashbag' : 'OCB',
+        'acetrader' : '에이스트레이더'
 
     }
 
@@ -73,6 +77,7 @@ def ga_preprocess():
 
     ga_index_merge = raw_data.merge(ga_index, on= ['source','campaign','medium','adcontent', '소재'], how = 'left')
     ga_index_merge['매체'] = ga_index_merge['source'].apply(lambda x : source_name_dict.get(x) if x in source_name_dict.keys() else x)
+    ga_index_merge.loc[(ga_index_merge['source']=='mkakao') & (ga_index_merge['adcontent'].str.count(pat='biz-') > 0), '매체' ] = '비즈보드'
 
     return ga_index_merge
 

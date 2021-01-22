@@ -12,7 +12,7 @@ def registration():
         'kakao AD_MO_모먼트' : '모먼트_',
         'kakao AD_MO_비즈보드' : '비즈보드_',
         'SKT_T전화/빌레터' : '모비엠_',
-        '네이버M 메일DA' : '네이버메일_'
+        '네이버M 메일DA' : 'OCB_'
     }
 
     reg_data['매체'] = reg_data['매체'].apply(lambda x : name_dict.get(x) if x in name_dict.keys() else x)
@@ -53,7 +53,7 @@ def issue():
         'kakao AD_MO_비즈보드' : '비즈보드_',
         'Kakao AD_PC': '모먼트_',
         'SKT_T전화/빌레터' : '모비엠_',
-        '네이버M 메일DA' : '네이버메일_'
+        '네이버M 메일DA' : 'OCB_'
     }
 
     issue_data['매체'] = issue_data['매체'].apply(lambda x : name_dict.get(x) if x in name_dict.keys() else x)

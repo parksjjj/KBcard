@@ -1,10 +1,10 @@
 # 개인 로컬 환경에 맞추어 조정
-dropbox_dir = 'C:/Dropbox'
-download_dir = 'C:/Users/asdad/Downloads'
+dropbox_dir = 'C:/Users/user/Dropbox (주식회사매드업)'
+download_dir = 'C:/Users/user/Downloads'
 # ========================
 
-report_dir = dropbox_dir + '/광고 영업/2. 광고주/KB국민카드/리포트 자동화'
-env_dir = dropbox_dir + '/광고 영업/2. 광고주/KB국민카드/report_env'
+report_dir = dropbox_dir + '/광고사업부/4. 광고주/KB국민카드/리포트 자동화'
+env_dir = dropbox_dir + '/광고사업부/4. 광고주/KB국민카드/report_env/KBcard'
 
 media_raw_dir = report_dir + '/1. 매체 데이터'
 da_raw_dir = media_raw_dir + '/1. DA'
